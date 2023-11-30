@@ -16,12 +16,15 @@ const Header = (props) => {
 };
 
 export const Nav = (props) => {
+
+  const {logo, links} = props;
+
   return (
     <div>
       <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            <img src={props.logo} width={100} height={30} />
+            <img src={logo} width={100} height={30} alt={logo} />
           </a>
           <button
             className="navbar-toggler"
@@ -33,21 +36,15 @@ export const Nav = (props) => {
           </button>
           <div className="collapse navbar-collapse" id="collapsibleNavbar">
             <ul className="navbar-nav">
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Link
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Link
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Link
-                </a>
-              </li>
+              {links.map((link, index) => {
+                const liElement = <li className="nav-item" key={index}>
+                                    <a className="nav-link" href="#">
+                                    {link}
+                                    </a>
+                                </li>;
+                                return liElement;
+              })}
+              
             </ul>
           </div>
         </div>
