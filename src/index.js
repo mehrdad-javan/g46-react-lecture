@@ -2,8 +2,19 @@ import ReactDOM from "react-dom/client";
 
 // npm install bootstrap@5
 import "bootstrap/dist/css/bootstrap.css";
-import App from "./ex2_function/App";
-//import App from "./ex1_class/App";
+import NameList from "./ex4_props/NameList";
+import Header from "./ex4_props/Header";
+import App from "./ex4_props/App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+
+/*root.render(
+  <>
+    <NameList names={["Mehrdad Javan", "Simon Elbrink", "Marcus Godmunson"]} />
+    <NameList names={["Test Test", "Test2 Test2"]} />
+  </>
+);*/
+
+root.render(
+    <App />
+  );

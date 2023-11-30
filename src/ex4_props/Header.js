@@ -1,30 +1,27 @@
-import React from 'react';
+import React from "react";
 
-//rsc
-export const Header = () => {
-
-  const headerElement = <header className='container-fluid bg-danger text-white pt-5 pb-5'>
-                          <div className='container'>
-                              <h2>Header Content!</h2>
-                          </div>
-                        </header>;
-
-    return (
-        <>
-        <Nav />
-        {headerElement}
-        </>
-    );
+const Header = (props) => {
+  return (
+    <header
+      className={`container-fluid bg-${
+        props.bgColor ? props.bgColor : "secondary"
+      } text-white pt-5 pb-5`}
+    >
+      <div className="container">
+        <h2>{props.text && props.text}</h2>
+        <h2>{!props.text && "Default Header Text"}</h2>
+      </div>
+    </header>
+  );
 };
 
-
-export const Nav = () => {
-
-    return (
-        <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
+export const Nav = (props) => {
+  return (
+    <div>
+      <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            Logo
+            <img src={props.logo} width={100} height={30} />
           </a>
           <button
             className="navbar-toggler"
@@ -55,10 +52,8 @@ export const Nav = () => {
           </div>
         </div>
       </nav>
-    )
-}
+    </div>
+  );
+};
 
-
-
-
-//export default Header;
+export default Header;
