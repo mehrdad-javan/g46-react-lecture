@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import NameList from "./ex4_props/NameList";
 import Header from "./ex4_props/Header";
 import App from "./ex4_props/App";
+import Counter from "./ex5_state/Counter";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -16,5 +17,5 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 );*/
 
 root.render(
-    <App />
+    <Counter />
   );

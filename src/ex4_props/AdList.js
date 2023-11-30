@@ -5,7 +5,7 @@ const AdList = (props) => {
 
   
     const handleButtonClick = (input) => {
-        alert('Contact:', input);
+        alert('Contact:' + input);
     }
 
   return (
