@@ -9,6 +9,7 @@ import Counter from "./ex5_state/Counter";
 import MyComponent from "./ex6-demo-lifecycle/MyComponent";
 import ToggleButtun from "./ex5_state/ToggleButtun";
 import HooksDemo from "./ex7_hooks/HooksDemo";
+import TodoList from "./ex7_hooks/TodoList";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -24,5 +25,6 @@ root.render(
     <Counter />
     <ToggleButtun />
     <HooksDemo />
+    <TodoList />
   </div>
 );
