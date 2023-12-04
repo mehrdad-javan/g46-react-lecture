@@ -6,6 +6,9 @@ import NameList from "./ex4_props/NameList";
 import Header from "./ex4_props/Header";
 import App from "./ex4_props/App";
 import Counter from "./ex5_state/Counter";
+import MyComponent from "./ex6-demo-lifecycle/MyComponent";
+import ToggleButtun from "./ex5_state/ToggleButtun";
+import HooksDemo from "./ex7_hooks/HooksDemo";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -17,5 +20,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 );*/
 
 root.render(
+  <div className="container">
     <Counter />
-  );
+    <ToggleButtun />
+    <HooksDemo />
+  </div>
+);
