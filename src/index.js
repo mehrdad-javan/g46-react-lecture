@@ -12,6 +12,7 @@ import HooksDemo from "./ex7_hooks/HooksDemo";
 import TodoList from "./ex7_hooks/TodoList";
 import ValidationForm from "./ex7_hooks/ValidationForm";
 import HookFormDemo from "./ex7_hooks/HookFormDemo";
+import SkillPractice from "./ex7_hooks/SkillPractice";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -27,5 +28,8 @@ root.render(
     <ValidationForm />
     <br/>
     <HookFormDemo />
+    <br/>
+    <SkillPractice />
+    <br/>
   </div>
 );
