@@ -10,7 +10,7 @@ import MyComponent from "./ex6-demo-lifecycle/MyComponent";
 import ToggleButtun from "./ex5_state/ToggleButtun";
 import HooksDemo from "./ex7_hooks/HooksDemo";
 import TodoList from "./ex7_hooks/TodoList";
-import EmailForm from "./ex7_hooks/EmailForm";
+import ValidationForm from "./ex7_hooks/ValidationForm";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -23,6 +23,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <div className="container">
-    <EmailForm />
+    <ValidationForm />
   </div>
 );
