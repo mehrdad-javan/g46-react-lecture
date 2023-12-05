@@ -11,6 +11,7 @@ import ToggleButtun from "./ex5_state/ToggleButtun";
 import HooksDemo from "./ex7_hooks/HooksDemo";
 import TodoList from "./ex7_hooks/TodoList";
 import ValidationForm from "./ex7_hooks/ValidationForm";
+import HookFormDemo from "./ex7_hooks/HookFormDemo";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -24,5 +25,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <div className="container">
     <ValidationForm />
+    <br/>
+    <HookFormDemo />
   </div>
 );
