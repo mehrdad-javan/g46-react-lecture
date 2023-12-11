@@ -13,6 +13,7 @@ import TodoList from "./ex7_hooks/TodoList";
 import ValidationForm from "./ex7_hooks/ValidationForm";
 import HookFormDemo from "./ex7_hooks/HookFormDemo";
 import SkillPractice from "./ex7_hooks/SkillPractice";
+import AxiosDemo from "./ex8_axios-router/AxiosDemo";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -25,11 +26,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <div className="container">
-    <ValidationForm />
-    <br/>
-    <HookFormDemo />
-    <br/>
-    <SkillPractice />
-    <br/>
+    <AxiosDemo />
   </div>
 );
