@@ -25,9 +25,24 @@ const AxiosDemo = () => {
     console.log("End");
   };
 
-  const bookBookingClickHandler = () => {
-    
-  }
+  const bookBookingClickHandler = async (id, email) => {
+    axios
+      .post(baseURL + "/api/v1/booking/book", { id, email })
+      .then((response) => {
+        console.log("RESPONSE:", response);
+        if (response.status === 201) {
+          console.log("Booking is Done!");
+          getBookingsClickHandler();
+        }
+      })
+      .catch((error) => {
+        console.log("ERROR:", error);
+        // display error message to user if error exist and its status was 400
+        if(error.response){
+            console.log(error.response.data);
+        }
+      });
+  };
 
   return (
     <div className="container">
@@ -49,12 +64,24 @@ const AxiosDemo = () => {
           )}
           <div className="row">
             {bookings.map((booking) => (
-              <div className="card mb-4 col-md-3">
+              <div key={booking.id} className="card mb-4 col-md-3">
                 <div className="card-body">
                   <h5 className="card-title">{booking.dateTime}</h5>
                 </div>
                 <div className="d-grid card-footer">
-                    <button type="button" className="btn btn-success" onClick={bookBookingClickHandler} >Book</button>
+                  <button
+                    type="button"
+                    className={`btn btn-${booking.booked ? 'danger' : 'success'}`}
+                    onClick={() =>
+                      bookBookingClickHandler(
+                        booking.id,
+                        "test.test@test.se"
+                      )
+                    }
+                    disabled={`${booking.booked ? 'disabled' : ''}`}
+                  >
+                    {booking.booked ? 'Booked' : 'Available'}
+                  </button>
                 </div>
               </div>
             ))}
