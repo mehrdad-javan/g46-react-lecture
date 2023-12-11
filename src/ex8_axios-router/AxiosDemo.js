@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const AxiosDemo = () => {
+    const navigate = useNavigate();
+
   const baseURL = "http://localhost:8080";
 
   const [bookings, setBookings] = useState([]);
@@ -67,6 +70,7 @@ const AxiosDemo = () => {
               <div key={booking.id} className="card mb-4 col-md-3">
                 <div className="card-body">
                   <h5 className="card-title">{booking.dateTime}</h5>
+                  <button className="btn btn-info" onClick={ () => navigate('/details/' + booking.id)} >Details</button>
                 </div>
                 <div className="d-grid card-footer">
                   <button
